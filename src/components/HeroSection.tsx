@@ -9,13 +9,13 @@ export const HeroSection = ({ language }: HeroSectionProps) => {
     en: {
       title: "Shaping the",
       subtitle: "Future",
-      description: "Professional International Group",
+      description: "Wajih International Group",
       scroll: "Explore Our Journey"
     },
     ar: {
       title: "تشكيل",
       subtitle: "المشهد",
-      description: "مجموعة وجهة إنترناشيونال",
+      description: "مجموعة وجيه إنترناشيونال",
       scroll: "استكشف رحلتنا"
     }
   };
