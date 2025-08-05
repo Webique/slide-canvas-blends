@@ -41,7 +41,7 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* 2015 Founding */}
             <div className={`${language === 'ar' ? 'md:order-2' : ''}`}>
-              <div className="bg-gradient-primary p-8 rounded-3xl shadow-glow transform hover:scale-105 transition-all duration-300">
+              <div className="bg-gradient-to-br from-[#5144e9] to-[#3d35b8] p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-all duration-300">
                 <div className="text-center text-white">
                   <div className="text-7xl md:text-8xl font-bold mb-6 floating-animation">
                     {founding}
@@ -58,7 +58,7 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
 
             {/* 2025 Re-establishment */}
             <div className={`${language === 'ar' ? 'md:order-1' : ''}`}>
-              <div className="bg-gradient-secondary p-8 rounded-3xl shadow-glow transform hover:scale-105 transition-all duration-300">
+              <div className="bg-gradient-to-br from-[#62e889] to-[#4bc965] p-8 rounded-3xl shadow-lg transform hover:scale-105 transition-all duration-300">
                 <div className="text-center text-white">
                   <div className="text-7xl md:text-8xl font-bold mb-6 floating-animation" style={{animationDelay: '0.5s'}}>
                     {expansion}
@@ -80,11 +80,11 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
               {/* Timeline visualization */}
               <div className="relative w-full">
                 {/* Main timeline line */}
-                <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-primary rounded-full transform -translate-y-1/2"></div>
+                <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-[#5144e9] to-[#62e889] rounded-full transform -translate-y-1/2"></div>
                 
                 {/* 2015 milestone */}
                 <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-full shadow-glow flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#5144e9] rounded-full shadow-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">2015</span>
                   </div>
                   <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
@@ -96,12 +96,12 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
 
                 {/* Progress indicator */}
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full shadow-glow animate-pulse"></div>
+                  <div className="w-8 h-8 bg-gradient-to-r from-[#5144e9] to-[#62e889] rounded-full shadow-lg animate-pulse"></div>
                 </div>
 
                 {/* 2025 milestone */}
                 <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
-                  <div className="w-12 h-12 bg-gradient-secondary rounded-full shadow-glow flex items-center justify-center">
+                  <div className="w-12 h-12 bg-[#62e889] rounded-full shadow-lg flex items-center justify-center">
                     <span className="text-white font-bold text-sm">2025</span>
                   </div>
                   <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">

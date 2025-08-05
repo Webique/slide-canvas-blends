@@ -105,14 +105,14 @@ export const GroupCompaniesSection = ({ language }: GroupCompaniesSectionProps) 
                 {/* 3D Cube effect */}
                 <div className="relative transform transition-all duration-500 group-hover:scale-105 group-hover:-rotate-2">
                   {/* Main cube face */}
-                  <div className={`relative bg-gradient-${index % 2 === 0 ? 'primary' : 'secondary'} p-8 rounded-2xl shadow-glow`}>
+                  <div className={`relative ${index % 2 === 0 ? 'bg-gradient-to-br from-[#5144e9] to-[#3d35b8]' : 'bg-gradient-to-br from-[#62e889] to-[#4bc965]'} p-8 rounded-2xl shadow-lg`}>
                     {/* Company number */}
-                    <div className="absolute -top-4 -left-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-elevated">
-                      <span className="text-2xl font-bold text-primary">{company.number}</span>
+                    <div className="absolute -top-4 -left-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-2xl font-bold text-[#5144e9]">{company.number}</span>
                     </div>
 
                     {/* Cube side effect */}
-                    <div className={`absolute -bottom-2 -right-2 w-full h-full bg-gradient-${index % 2 === 0 ? 'secondary' : 'primary'} rounded-2xl opacity-60 -z-10`}></div>
+                    <div className={`absolute -bottom-2 -right-2 w-full h-full ${index % 2 === 0 ? 'bg-gradient-to-br from-[#62e889] to-[#4bc965]' : 'bg-gradient-to-br from-[#5144e9] to-[#3d35b8]'} rounded-2xl opacity-60 -z-10`}></div>
 
                     <div className="relative z-10">
                       <div className="flex items-center justify-center w-16 h-16 bg-white/20 rounded-xl mb-6 mx-auto group-hover:rotate-12 transition-transform duration-300">
@@ -132,7 +132,7 @@ export const GroupCompaniesSection = ({ language }: GroupCompaniesSectionProps) 
 
                 {/* Connecting lines for visual flow */}
                 {index < companies.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-primary opacity-30 z-0"></div>
+                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-[#5144e9] to-[#62e889] opacity-50 z-0"></div>
                 )}
               </div>
             );
@@ -141,7 +141,7 @@ export const GroupCompaniesSection = ({ language }: GroupCompaniesSectionProps) 
 
         {/* Central connecting element */}
         <div className="mt-16 flex justify-center">
-          <div className="w-32 h-32 bg-gradient-primary rounded-full shadow-glow flex items-center justify-center relative">
+          <div className="w-32 h-32 bg-gradient-to-br from-[#5144e9] to-[#62e889] rounded-full shadow-lg flex items-center justify-center relative">
             <div className="text-white font-bold text-xl">{companies.length}</div>
             <div className="absolute inset-0 border-4 border-dashed border-white/30 rounded-full animate-spin" style={{animationDuration: '10s'}}></div>
           </div>
