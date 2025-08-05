@@ -12,14 +12,18 @@ export const Navigation = ({ language, onLanguageToggle }: NavigationProps) => {
       about: "Introduction", 
       vision: "Vision",
       business: "Business Model",
-      foundation: "Foundation"
+      foundation: "Foundation",
+      companies: "Companies",
+      excellence: "Excellence"
     },
     ar: {
       home: "الرئيسية",
       about: "مقدمة",
       vision: "رؤيتنا", 
       business: "نموذج العمل",
-      foundation: "النشأة"
+      foundation: "النشأة",
+      companies: "الشركات",
+      excellence: "التميز"
     }
   };
 
