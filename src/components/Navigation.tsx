@@ -52,7 +52,7 @@ export const Navigation = ({ language, onLanguageToggle }: NavigationProps) => {
             <img 
               src="/lovable-uploads/e65ec05a-c217-45f6-b102-c7a562e777ce.png" 
               alt="WajiH International Group Logo" 
-              className="h-16 md:h-20 lg:h-24 w-auto"
+              className="h-16 md:h-20 lg:h-24 w-auto max-w-[200px] md:max-w-[250px] lg:max-w-[300px]"
             />
           </div>
           
