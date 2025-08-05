@@ -53,7 +53,7 @@ export const GroupCompaniesSection = ({ language }: GroupCompaniesSectionProps) 
         {
           number: "02",
           name: "قيمة تالنت", 
-          description: "إدارة وتأهيل المناصر والمواهب",
+          description: "إدارة وتأهيل الموارد والمواهب",
           icon: Users
         },
         {

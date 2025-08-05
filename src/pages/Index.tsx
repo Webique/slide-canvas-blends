@@ -6,10 +6,7 @@ import { VisionSection } from "@/components/VisionSection";
 import { BusinessModelSection } from "@/components/BusinessModelSection";
 import { FoundationSection } from "@/components/FoundationSection";
 import { GroupCompaniesSection } from "@/components/GroupCompaniesSection";
-import { ExcellencePointsSection } from "@/components/ExcellencePointsSection";
-import { ClientsSection } from "@/components/ClientsSection";
-import { HeadquartersSection } from "@/components/HeadquartersSection";
-import { ContactSection } from "@/components/ContactSection";
+import { CombinedSection } from "@/components/CombinedSection";
 import { WorkAreasSection } from "@/components/WorkAreasSection";
 
 const Index = () => {
@@ -47,24 +44,12 @@ const Index = () => {
         <GroupCompaniesSection language={language} />
       </div>
       
-      <div id="excellence">
-        <ExcellencePointsSection language={language} />
-      </div>
-      
       <div id="areas">
         <WorkAreasSection language={language} />
       </div>
       
-      <div id="clients">
-        <ClientsSection language={language} />
-      </div>
-      
-      <div id="headquarters">
-        <HeadquartersSection language={language} />
-      </div>
-      
-      <div id="contact">
-        <ContactSection language={language} />
+      <div id="combined">
+        <CombinedSection language={language} />
       </div>
     </div>
   );
