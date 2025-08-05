@@ -56,7 +56,7 @@ export const VisionSection = ({ language }: VisionSectionProps) => {
                   {vision.title}
                 </h3>
               </div>
-              <p className={`text-white/90 text-lg leading-relaxed ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+              <p className="text-white/90 text-lg leading-relaxed text-justify">
                 {vision.description}
               </p>
             </div>
@@ -73,7 +73,7 @@ export const VisionSection = ({ language }: VisionSectionProps) => {
                   {message.title}
                 </h3>
               </div>
-              <p className={`text-white/90 text-lg leading-relaxed ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+              <p className="text-white/90 text-lg leading-relaxed text-justify">
                 {message.description}
               </p>
             </div>
