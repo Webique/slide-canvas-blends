@@ -62,12 +62,6 @@ export const CombinedSection = ({ language }: CombinedSectionProps) => {
       label: 'Instagram'
     },
     { 
-      icon: MessageCircle, 
-      color: 'from-green-500 to-green-600',
-      url: 'https://wa.me/966500000000',
-      label: 'WhatsApp'
-    },
-    { 
       icon: Twitter, 
       color: 'from-blue-400 to-blue-600',
       url: 'https://twitter.com/wajihgroup',
@@ -190,7 +184,7 @@ export const CombinedSection = ({ language }: CombinedSectionProps) => {
             </div>
 
             {/* Social Media */}
-            <div className="grid grid-cols-4 gap-4 mt-8">
+            <div className="grid grid-cols-3 gap-4 mt-8">
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
                 return (

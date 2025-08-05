@@ -27,15 +27,13 @@ export const ContactSection = ({ language }: ContactSectionProps) => {
   const contactMethods = [
     { icon: Mail, label: email, type: 'email' },
     { icon: Phone, label: '+966 XX XXX XXXX', type: 'phone' },
-    { icon: Globe, label: website, type: 'website' },
-    { icon: MessageCircle, label: social, type: 'social' }
+    { icon: Globe, label: website, type: 'website' }
   ];
 
   const socialIcons = [
     { icon: Instagram, color: 'from-pink-500 to-purple-600' },
     { icon: Twitter, color: 'from-blue-400 to-blue-600' },
-    { icon: Linkedin, color: 'from-blue-600 to-blue-800' },
-    { icon: MessageCircle, color: 'from-green-500 to-green-600' }
+    { icon: Linkedin, color: 'from-blue-600 to-blue-800' }
   ];
 
   return (
