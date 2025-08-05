@@ -74,12 +74,57 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
             </div>
           </div>
 
-          {/* Timeline connector */}
-          <div className="mt-12 flex justify-center">
-            <div className="flex items-center space-x-8">
-              <div className="w-6 h-6 bg-gradient-primary rounded-full shadow-glow"></div>
-              <div className="w-24 h-1 bg-gradient-primary rounded-full"></div>
-              <div className="w-6 h-6 bg-gradient-secondary rounded-full shadow-glow"></div>
+          {/* Enhanced Timeline */}
+          <div className="mt-16 relative">
+            <div className="flex justify-center items-center max-w-2xl mx-auto">
+              {/* Timeline visualization */}
+              <div className="relative w-full">
+                {/* Main timeline line */}
+                <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-primary rounded-full transform -translate-y-1/2"></div>
+                
+                {/* 2015 milestone */}
+                <div className="absolute left-0 top-1/2 transform -translate-y-1/2">
+                  <div className="w-12 h-12 bg-gradient-primary rounded-full shadow-glow flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">2015</span>
+                  </div>
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                    <span className="text-sm text-foreground/80 font-medium">
+                      {language === 'en' ? 'Founded' : 'التأسيس'}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Progress indicator */}
+                <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <div className="w-8 h-8 bg-gradient-to-r from-primary to-secondary rounded-full shadow-glow animate-pulse"></div>
+                </div>
+
+                {/* 2025 milestone */}
+                <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
+                  <div className="w-12 h-12 bg-gradient-secondary rounded-full shadow-glow flex items-center justify-center">
+                    <span className="text-white font-bold text-sm">2025</span>
+                  </div>
+                  <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                    <span className="text-sm text-foreground/80 font-medium">
+                      {language === 'en' ? 'Expansion' : 'التوسع'}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Arrow indicating progression */}
+                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-secondary">
+                  <div className="w-3 h-3 border-t-2 border-r-2 border-secondary transform rotate-45"></div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Timeline description */}
+            <div className="mt-12 text-center">
+              <p className="text-foreground/60 text-sm max-w-md mx-auto">
+                {language === 'en' 
+                  ? '10 years of growth and evolution' 
+                  : '10 سنوات من النمو والتطور'}
+              </p>
             </div>
           </div>
         </div>
