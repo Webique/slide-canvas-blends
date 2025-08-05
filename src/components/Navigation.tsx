@@ -1,4 +1,12 @@
 import { LanguageToggle } from "./LanguageToggle";
+import { Menu } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { Button } from "@/components/ui/button";
 
 interface NavigationProps {
   language: 'en' | 'ar';
@@ -44,50 +52,108 @@ export const Navigation = ({ language, onLanguageToggle }: NavigationProps) => {
             {language === 'en' ? 'Wejha International' : 'وجهة إنترناشيونال'}
           </div>
           
-          {/* Navigation Menu */}
-          <div className={`flex flex-wrap gap-1 md:gap-2 ${language === 'ar' ? 'font-arabic' : ''} text-xs`}>
+          {/* Desktop Navigation Menu */}
+          <div className={`hidden md:flex gap-3 lg:gap-4 ${language === 'ar' ? 'font-arabic' : ''} text-sm`}>
             <button 
               onClick={() => scrollToSection('hero')}
-              className={`text-white/80 hover:text-white transition-colors duration-300 px-1 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
+              className={`text-white/80 hover:text-white transition-colors duration-300 px-2 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
             >
               {navItems.home}
             </button>
             <button 
               onClick={() => scrollToSection('intro')}
-              className={`text-white/80 hover:text-white transition-colors duration-300 px-1 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
+              className={`text-white/80 hover:text-white transition-colors duration-300 px-2 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
             >
               {navItems.about}
             </button>
             <button 
               onClick={() => scrollToSection('vision')}
-              className={`text-white/80 hover:text-white transition-colors duration-300 px-1 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
+              className={`text-white/80 hover:text-white transition-colors duration-300 px-2 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
             >
               {navItems.vision}
             </button>
             <button 
               onClick={() => scrollToSection('business')}
-              className={`text-white/80 hover:text-white transition-colors duration-300 px-1 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
+              className={`text-white/80 hover:text-white transition-colors duration-300 px-2 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
             >
               {navItems.business}
             </button>
             <button 
               onClick={() => scrollToSection('foundation')}
-              className={`text-white/80 hover:text-white transition-colors duration-300 px-1 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
+              className={`text-white/80 hover:text-white transition-colors duration-300 px-2 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
             >
               {navItems.foundation}
             </button>
             <button 
               onClick={() => scrollToSection('companies')}
-              className={`text-white/80 hover:text-white transition-colors duration-300 px-1 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
+              className={`text-white/80 hover:text-white transition-colors duration-300 px-2 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
             >
               {navItems.companies}
             </button>
             <button 
               onClick={() => scrollToSection('combined')}
-              className={`text-white/80 hover:text-white transition-colors duration-300 px-1 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
+              className={`text-white/80 hover:text-white transition-colors duration-300 px-2 py-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}
             >
               {navItems.excellence}
             </button>
+          </div>
+
+          {/* Mobile Navigation Menu */}
+          <div className="md:hidden">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="sm" className="text-white hover:bg-white/20">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent 
+                align="end" 
+                className={`w-48 bg-black/90 border-white/20 backdrop-blur-md ${language === 'ar' ? 'font-arabic' : ''}`}
+              >
+                <DropdownMenuItem 
+                  onClick={() => scrollToSection('hero')}
+                  className="text-white hover:bg-white/20 cursor-pointer"
+                >
+                  {navItems.home}
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => scrollToSection('intro')}
+                  className="text-white hover:bg-white/20 cursor-pointer"
+                >
+                  {navItems.about}
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => scrollToSection('vision')}
+                  className="text-white hover:bg-white/20 cursor-pointer"
+                >
+                  {navItems.vision}
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => scrollToSection('business')}
+                  className="text-white hover:bg-white/20 cursor-pointer"
+                >
+                  {navItems.business}
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => scrollToSection('foundation')}
+                  className="text-white hover:bg-white/20 cursor-pointer"
+                >
+                  {navItems.foundation}
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => scrollToSection('companies')}
+                  className="text-white hover:bg-white/20 cursor-pointer"
+                >
+                  {navItems.companies}
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => scrollToSection('combined')}
+                  className="text-white hover:bg-white/20 cursor-pointer"
+                >
+                  {navItems.excellence}
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           <LanguageToggle language={language} onToggle={onLanguageToggle} />
