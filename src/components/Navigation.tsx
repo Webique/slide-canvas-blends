@@ -48,8 +48,12 @@ export const Navigation = ({ language, onLanguageToggle }: NavigationProps) => {
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
       <div className="container-custom px-3 py-2">
         <div className="flex items-center justify-between">
-          <div className={`text-sm md:text-lg font-bold text-white ${language === 'ar' ? 'font-arabic' : ''}`}>
-            {language === 'en' ? 'Wejha International' : 'وجهة إنترناشيونال'}
+          <div className="flex items-center">
+            <img 
+              src="/lovable-uploads/e65ec05a-c217-45f6-b102-c7a562e777ce.png" 
+              alt="WajiH International Group Logo" 
+              className="h-8 md:h-10 w-auto"
+            />
           </div>
           
           {/* Desktop Navigation Menu */}
