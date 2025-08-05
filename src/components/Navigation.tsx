@@ -41,40 +41,52 @@ export const Navigation = ({ language, onLanguageToggle }: NavigationProps) => {
       <div className="container-custom px-6 py-4">
         <div className={`flex items-center justify-between ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
           <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
-            <div className={`text-2xl font-bold text-white ${language === 'ar' ? 'font-arabic' : ''}`}>
+            <div className={`text-xl md:text-2xl font-bold text-white ${language === 'ar' ? 'font-arabic' : ''}`}>
               {language === 'en' ? 'Wejha International' : 'وجهة إنترناشيونال'}
             </div>
             
-            <div className={`hidden md:flex ${language === 'ar' ? 'space-x-reverse space-x-6 font-arabic' : 'space-x-6'}`}>
+            <div className={`hidden lg:flex ${language === 'ar' ? 'space-x-reverse space-x-4 font-arabic text-sm' : 'space-x-6 text-sm'}`}>
               <button 
                 onClick={() => scrollToSection('hero')}
-                className="text-white/80 hover:text-white transition-colors duration-300"
+                className={`text-white/80 hover:text-white transition-colors duration-300 ${language === 'ar' ? 'text-right' : 'text-left'}`}
               >
                 {navItems.home}
               </button>
               <button 
                 onClick={() => scrollToSection('intro')}
-                className="text-white/80 hover:text-white transition-colors duration-300"
+                className={`text-white/80 hover:text-white transition-colors duration-300 ${language === 'ar' ? 'text-right' : 'text-left'}`}
               >
                 {navItems.about}
               </button>
               <button 
                 onClick={() => scrollToSection('vision')}
-                className="text-white/80 hover:text-white transition-colors duration-300"
+                className={`text-white/80 hover:text-white transition-colors duration-300 ${language === 'ar' ? 'text-right' : 'text-left'}`}
               >
                 {navItems.vision}
               </button>
               <button 
                 onClick={() => scrollToSection('business')}
-                className="text-white/80 hover:text-white transition-colors duration-300"
+                className={`text-white/80 hover:text-white transition-colors duration-300 ${language === 'ar' ? 'text-right' : 'text-left'}`}
               >
                 {navItems.business}
               </button>
               <button 
                 onClick={() => scrollToSection('foundation')}
-                className="text-white/80 hover:text-white transition-colors duration-300"
+                className={`text-white/80 hover:text-white transition-colors duration-300 ${language === 'ar' ? 'text-right' : 'text-left'}`}
               >
                 {navItems.foundation}
+              </button>
+              <button 
+                onClick={() => scrollToSection('companies')}
+                className={`text-white/80 hover:text-white transition-colors duration-300 ${language === 'ar' ? 'text-right' : 'text-left'}`}
+              >
+                {navItems.companies}
+              </button>
+              <button 
+                onClick={() => scrollToSection('combined')}
+                className={`text-white/80 hover:text-white transition-colors duration-300 ${language === 'ar' ? 'text-right' : 'text-left'}`}
+              >
+                {navItems.excellence}
               </button>
             </div>
           </div>
