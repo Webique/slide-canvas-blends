@@ -43,7 +43,7 @@ export const IntroSection = ({ language }: IntroSectionProps) => {
           </div>
 
           <div className="glass-effect p-8 md:p-12 rounded-3xl">
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed text-justify">
+            <p className={`text-lg md:text-xl text-white/90 leading-relaxed ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {description}
             </p>
           </div>
