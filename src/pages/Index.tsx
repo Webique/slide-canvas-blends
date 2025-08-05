@@ -4,7 +4,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { IntroSection } from "@/components/IntroSection";
 import { VisionSection } from "@/components/VisionSection";
 import { BusinessModelSection } from "@/components/BusinessModelSection";
-import { BalanceSection } from "@/components/BalanceSection";
+import { FoundationSection } from "@/components/FoundationSection";
 import { WorkAreasSection } from "@/components/WorkAreasSection";
 
 const Index = () => {
@@ -34,8 +34,8 @@ const Index = () => {
         <BusinessModelSection language={language} />
       </div>
       
-      <div id="balance">
-        <BalanceSection language={language} />
+      <div id="foundation">
+        <FoundationSection language={language} />
       </div>
       
       <div id="areas">

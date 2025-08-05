@@ -12,14 +12,14 @@ export const Navigation = ({ language, onLanguageToggle }: NavigationProps) => {
       about: "Introduction", 
       vision: "Vision",
       business: "Business Model",
-      areas: "Work Areas"
+      foundation: "Foundation"
     },
     ar: {
       home: "الرئيسية",
       about: "مقدمة",
       vision: "رؤيتنا", 
       business: "نموذج العمل",
-      areas: "مجالات العمل"
+      foundation: "النشأة"
     }
   };
 
@@ -35,13 +35,13 @@ export const Navigation = ({ language, onLanguageToggle }: NavigationProps) => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
       <div className="container-custom px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-8">
-            <div className="text-2xl font-bold text-white">
+        <div className={`flex items-center justify-between ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
+          <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
+            <div className={`text-2xl font-bold text-white ${language === 'ar' ? 'font-arabic' : ''}`}>
               {language === 'en' ? 'Wejha International' : 'وجهة إنترناشيونال'}
             </div>
             
-            <div className={`hidden md:flex space-x-6 ${language === 'ar' ? 'space-x-reverse' : ''}`}>
+            <div className={`hidden md:flex ${language === 'ar' ? 'space-x-reverse space-x-6 font-arabic' : 'space-x-6'}`}>
               <button 
                 onClick={() => scrollToSection('hero')}
                 className="text-white/80 hover:text-white transition-colors duration-300"
@@ -67,10 +67,10 @@ export const Navigation = ({ language, onLanguageToggle }: NavigationProps) => {
                 {navItems.business}
               </button>
               <button 
-                onClick={() => scrollToSection('areas')}
+                onClick={() => scrollToSection('foundation')}
                 className="text-white/80 hover:text-white transition-colors duration-300"
               >
-                {navItems.areas}
+                {navItems.foundation}
               </button>
             </div>
           </div>
