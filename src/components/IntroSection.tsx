@@ -6,11 +6,11 @@ export const IntroSection = ({ language }: IntroSectionProps) => {
   const content = {
     en: {
       title: "Introduction",
-      description: "Wejha International Group was founded in the digital sector in Saudi Arabia and has been committed to leadership within the Kingdom since its establishment. Professional in nature, we specialize in digital consultancy and advanced development, focusing on supporting our clients with innovative technology, human resources development, and technological advancements within institutional frameworks that meet the requirements of the Saudi market.",
+      description: "Wajih International Group was founded in the digital sector in Saudi Arabia and has been committed to leadership within the Kingdom since its establishment. Professional in nature, we specialize in digital consultancy and advanced development, focusing on supporting our clients with innovative technology, human resources development, and technological advancements within institutional frameworks that meet the requirements of the Saudi market.",
     },
     ar: {
       title: "مقدمة",
-      description: "مجموعة وجهة إنترناشيونال هي مجموعة سعودية رائدة في قطاع الرقمي أُسست برؤية طموحة لصناعة مستقبل رقمي مزدهر داخل المملكة وخارجها. تعمل المجموعة بعمق شغف هدفي يجمع بين التشغيل المباشر داخل المملكة والاستثمار الأجنبي وتطوير العلامات التجارية المخصصة ضمن قطاعات الرقمية المتطلبات السوق السعودي والقليلي."
+      description: "مجموعة وجيه إنترناشيونال هي مجموعة سعودية رائدة في قطاع الرقمي أُسست برؤية طموحة لصناعة مستقبل رقمي مزدهر داخل المملكة وخارجها. تعمل المجموعة بعمق شغف هدفي يجمع بين التشغيل المباشر داخل المملكة والاستثمار الأجنبي وتطوير العلامات التجارية المخصصة ضمن قطاعات الرقمية المتطلبات السوق السعودي والقليلي."
     }
   };
 
@@ -43,7 +43,7 @@ export const IntroSection = ({ language }: IntroSectionProps) => {
           </div>
 
           <div className="glass-effect p-8 md:p-12 rounded-3xl">
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed text-justify">
+            <p className={`text-lg md:text-xl text-white/90 leading-relaxed ${language === 'ar' ? 'text-right' : 'text-left'}`}>
               {description}
             </p>
           </div>
