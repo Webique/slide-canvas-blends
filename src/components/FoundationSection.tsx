@@ -7,16 +7,16 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
     en: {
       title: "Foundation",
       founders: "550 Founders",
-      foundersDesc: "(Research by Abdul Rahman Sarhan Company Limited)",
+      foundersDesc: "Company established in 2015",
       expansion: "Re-establishment and Expansion",
-      expansionDesc: "50 under the new founding identity (International Group Wejha)"
+      expansionDesc: "Re-founding and expansion in 2025 under the new identity (Wejha International Group)"
     },
     ar: {
       title: "النشأة",
       founders: "550 مؤسس",
-      foundersDesc: "(بحث مسح شركة عبد الرحمن سرحان المحدودة)",
-      expansion: "إعادة التأسيس والتوسع",
-      expansionDesc: "50 تحت الهوية التأسيسية الجديدة (وجهة إنترناشيونال جروب)"
+      foundersDesc: "تأسست الشركة عام 2015",
+      expansion: "إعادة التأسيس والتوسع", 
+      expansionDesc: "إعادة التأسيس والتوسع عام 2025 تحت الهوية الجديدة (وجهة إنترناشيونال جروب)"
     }
   };
 
@@ -46,7 +46,7 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
               <div className="glass-effect p-8 rounded-3xl border-l-4 border-primary shadow-elevated hover:shadow-glow transition-all duration-300">
                 <div className="text-center">
                   <div className="text-8xl md:text-9xl font-bold gradient-text mb-4 floating-animation">
-                    550
+                    2015
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                     {founders}
@@ -63,7 +63,7 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
               <div className="glass-effect p-8 rounded-3xl border-l-4 border-secondary shadow-elevated hover:shadow-glow transition-all duration-300">
                 <div className="text-center">
                   <div className="text-8xl md:text-9xl font-bold gradient-text mb-4 floating-animation" style={{animationDelay: '0.5s'}}>
-                    50
+                    2025
                   </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                     {expansion}
@@ -86,7 +86,7 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
                 {/* Foundation milestone */}
                 <div className="absolute left-1/4 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
                   <div className="w-16 h-16 bg-gradient-primary rounded-full shadow-glow flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">550</span>
+                    <span className="text-white font-bold text-lg">2015</span>
                   </div>
                   <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
                     <span className="text-sm text-foreground/60">{language === 'en' ? 'Foundation' : 'التأسيس'}</span>
@@ -96,7 +96,7 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
                 {/* Growth milestone */}
                 <div className="absolute right-1/4 top-1/2 transform translate-x-1/2 -translate-y-1/2">
                   <div className="w-16 h-16 bg-gradient-secondary rounded-full shadow-glow flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">50</span>
+                    <span className="text-white font-bold text-lg">2025</span>
                   </div>
                   <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
                     <span className="text-sm text-foreground/60">{language === 'en' ? 'Expansion' : 'التوسع'}</span>

@@ -11,31 +11,31 @@ export const GroupCompaniesSection = ({ language }: GroupCompaniesSectionProps) 
       companies: [
         {
           number: "01",
-          name: "Sindhu",
+          name: "Layali Shado",
           description: "Operations Organization and Current Proposals",
           icon: Building2
         },
         {
           number: "02", 
-          name: "Qimmah Talent",
+          name: "Tempo Talent",
           description: "HR Management and Talent Development",
           icon: Users
         },
         {
           number: "03",
-          name: "Sintej Core",
+          name: "Stage Core",
           description: "Logistics and Equipment Solutions",
           icon: Target
         },
         {
           number: "04",
-          name: "Brandoor",
+          name: "Brandora",
           description: "Creative Digital Marketing Agency specialized in Digital Operations",
           icon: Lightbulb
         },
         {
           number: "05",
-          name: "FlipAxis",
+          name: "Vibe X",
           description: "Digital Pathways Operations and Services",
           icon: Zap
         }
@@ -46,31 +46,31 @@ export const GroupCompaniesSection = ({ language }: GroupCompaniesSectionProps) 
       companies: [
         {
           number: "01",
-          name: "سندو",
+          name: "ليالي شدو",
           description: "تنظيم العمليات والعروض الجارية",
           icon: Building2
         },
         {
           number: "02",
-          name: "قيمة تالنت", 
+          name: "تمبو تالنت", 
           description: "إدارة وتأهيل الموارد والمواهب",
           icon: Users
         },
         {
           number: "03",
-          name: "سنتج كور",
+          name: "ستيج كور",
           description: "حلول لوجستية وتجهيزات",
           icon: Target
         },
         {
           number: "04",
-          name: "براندور",
+          name: "براندورا",
           description: "وكالة تسويق إبداعي متخصصة في صناعة العمليات الرقمية",
           icon: Lightbulb
         },
         {
           number: "05",
-          name: "فليب أكسيس",
+          name: "فايب إكس",
           description: "تشغيل المسارات والعمليات الرقمية",
           icon: Zap
         }
