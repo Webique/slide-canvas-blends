@@ -38,14 +38,15 @@ export const Navigation = ({ language, onLanguageToggle }: NavigationProps) => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
-      <div className="container-custom px-6 py-4">
+      <div className="container-custom px-4 py-3">
         <div className={`flex items-center justify-between ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
-          <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
-            <div className={`text-xl md:text-2xl font-bold text-white ${language === 'ar' ? 'font-arabic' : ''}`}>
+          <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-6' : 'space-x-6'}`}>
+            <div className={`text-lg md:text-xl font-bold text-white ${language === 'ar' ? 'font-arabic' : ''}`}>
               {language === 'en' ? 'Wejha International' : 'وجهة إنترناشيونال'}
             </div>
             
-            <div className={`hidden lg:flex ${language === 'ar' ? 'space-x-reverse space-x-4 font-arabic text-sm' : 'space-x-6 text-sm'}`}>
+            {/* Mobile menu - simplified */}
+            <div className={`hidden xl:flex ${language === 'ar' ? 'space-x-reverse space-x-3 font-arabic' : 'space-x-4'} text-xs`}>
               <button 
                 onClick={() => scrollToSection('hero')}
                 className={`text-white/80 hover:text-white transition-colors duration-300 ${language === 'ar' ? 'text-right' : 'text-left'}`}

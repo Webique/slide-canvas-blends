@@ -6,21 +6,21 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
   const content = {
     en: {
       title: "Foundation",
-      founders: "550 Founders",
-      foundersDesc: "Established in 2015",
-      expansion: "Re-establishment and Expansion", 
-      expansionDesc: "Re-founding and expansion in 2025 under the new identity (Wejha International Group)"
+      establishment: "Established 2025",
+      establishmentDesc: "Founded in 2025 with a new vision and identity",
+      expansion: "Future Expansion",
+      expansionDesc: "Continuous growth and development under Wejha International Group"
     },
     ar: {
       title: "النشأة",
-      founders: "550 مؤسس",
-      foundersDesc: "تأسست عام 2015",
-      expansion: "إعادة التأسيس والتوسع",
-      expansionDesc: "إعادة التأسيس والتوسع عام 2025 تحت الهوية الجديدة (وجهة إنترناشيونال جروب)"
+      establishment: "تأسست 2025",
+      establishmentDesc: "تأسست عام 2025 برؤية وهوية جديدة",
+      expansion: "التوسع المستقبلي",
+      expansionDesc: "نمو وتطوير مستمر تحت مجموعة وجهة إنترناشيونال"
     }
   };
 
-  const { title, founders, foundersDesc, expansion, expansionDesc } = content[language];
+  const { title, establishment, establishmentDesc, expansion, expansionDesc } = content[language];
 
   return (
     <section className={`section-padding bg-background relative overflow-hidden ${language === 'ar' ? 'rtl font-arabic' : 'ltr'}`}>
@@ -39,75 +39,26 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
           <div className="w-24 h-1 bg-gradient-secondary mx-auto rounded-full"></div>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            {/* Left side - 550 Founders */}
-            <div className={`${language === 'ar' ? 'md:order-2' : ''}`}>
-              <div className="glass-effect p-8 rounded-3xl border-l-4 border-primary shadow-elevated hover:shadow-glow transition-all duration-300">
-                <div className="text-center">
-                  <div className="text-8xl md:text-9xl font-bold gradient-text mb-4 floating-animation">
-                    550
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                    {founders}
-                  </h3>
-                  <p className="text-lg text-foreground/70 leading-relaxed">
-                    {foundersDesc}
-                  </p>
-                </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="flex justify-center">
+            {/* Single centered card for establishment */}
+            <div className="glass-effect p-12 rounded-3xl border-l-4 border-primary shadow-elevated hover:shadow-glow transition-all duration-300 text-center max-w-2xl">
+              <div className="text-8xl md:text-9xl font-bold gradient-text mb-6 floating-animation">
+                2025
               </div>
-            </div>
-
-            {/* Right side - Re-establishment */}
-            <div className={`${language === 'ar' ? 'md:order-1' : ''}`}>
-              <div className="glass-effect p-8 rounded-3xl border-l-4 border-secondary shadow-elevated hover:shadow-glow transition-all duration-300">
-                <div className="text-center">
-                  <div className="text-6xl md:text-7xl font-bold gradient-text mb-4 floating-animation" style={{animationDelay: '0.5s'}}>
-                    2025
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                    {expansion}
-                  </h3>
-                  <p className="text-lg text-foreground/70 leading-relaxed">
-                    {expansionDesc}
-                  </p>
-                </div>
-              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                {establishment}
+              </h3>
+              <p className="text-xl text-foreground/70 leading-relaxed">
+                {establishmentDesc}
+              </p>
             </div>
           </div>
 
-          {/* Foundation journey visualization */}
-          <div className="mt-16 relative">
-            <div className="flex justify-center items-center">
-              <div className="relative w-full max-w-4xl">
-                {/* Timeline line */}
-                <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-primary rounded-full transform -translate-y-1/2"></div>
-                
-                {/* Foundation milestone */}
-                <div className="absolute left-1/4 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full shadow-glow flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">550</span>
-                  </div>
-                  <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                    <span className="text-sm text-foreground/60">{language === 'en' ? 'Founders 2015' : 'مؤسس 2015'}</span>
-                  </div>
-                </div>
-
-                {/* Growth milestone */}
-                <div className="absolute right-1/4 top-1/2 transform translate-x-1/2 -translate-y-1/2">
-                  <div className="w-16 h-16 bg-gradient-secondary rounded-full shadow-glow flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">2025</span>
-                  </div>
-                  <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                    <span className="text-sm text-foreground/60">{language === 'en' ? 'Expansion' : 'التوسع'}</span>
-                  </div>
-                </div>
-
-                {/* Arrow indicating progression */}
-                <div className="absolute right-8 top-1/2 transform -translate-y-1/2">
-                  <div className="w-6 h-6 border-t-2 border-r-2 border-primary transform rotate-45"></div>
-                </div>
-              </div>
+          {/* Simple decorative element */}
+          <div className="mt-16 flex justify-center">
+            <div className="w-20 h-20 bg-gradient-primary rounded-full shadow-glow flex items-center justify-center">
+              <div className="text-white font-bold text-2xl">2025</div>
             </div>
           </div>
         </div>
