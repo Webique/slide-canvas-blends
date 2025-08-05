@@ -8,7 +8,7 @@ export const CombinedSection = ({ language }: CombinedSectionProps) => {
   const content = {
     en: {
       excellenceTitle: "Excellence Points & Work Areas",
-      clientsTitle: "50+ Trusted Clients",
+      clientsTitle: "82 Trusted Clients",
       contactTitle: "Get In Touch",
       headquarters: "Global Presence: Jeddah • Riyadh • Cairo",
       email: "INFO@WAJIHGROUP.CO",
@@ -30,7 +30,7 @@ export const CombinedSection = ({ language }: CombinedSectionProps) => {
     },
     ar: {
       excellenceTitle: "نقاط التميز ومجالات العمل",
-      clientsTitle: "أكثر من 50 عميل",
+      clientsTitle: "82 عميل",
       contactTitle: "تواصل معنا",
       headquarters: "تواجد عالمي: جدة • الرياض • القاهرة",
       email: "INFO@WAJIHGROUP.CO",
@@ -129,7 +129,7 @@ export const CombinedSection = ({ language }: CombinedSectionProps) => {
             <div className="relative inline-block">
               <div className="w-40 h-40 bg-gradient-secondary rounded-full shadow-glow flex items-center justify-center transform hover:scale-110 transition-all duration-300 cursor-pointer">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-white mb-2">50+</div>
+                  <div className="text-4xl font-bold text-white mb-2">82</div>
                   <div className="text-white/80 text-sm">
                     {language === 'en' ? 'Clients' : 'عميل'}
                   </div>
