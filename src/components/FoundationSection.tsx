@@ -6,29 +6,27 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
   const content = {
     en: {
       title: "Foundation",
-      establishment: "Established 2025",
-      establishmentDesc: "Founded in 2025 with a new vision and identity",
-      expansion: "Future Expansion",
-      expansionDesc: "Continuous growth and development under Wejha International Group"
+      founding: "2015",
+      foundingDesc: "Founded under Abdul Rahman Sarhan Limited Company",
+      expansion: "2025", 
+      expansionDesc: "Re-establishment and expansion under the new institutional identity (Wejha International Group)"
     },
     ar: {
       title: "النشأة",
-      establishment: "تأسست 2025",
-      establishmentDesc: "تأسست عام 2025 برؤية وهوية جديدة",
-      expansion: "التوسع المستقبلي",
-      expansionDesc: "نمو وتطوير مستمر تحت مجموعة وجهة إنترناشيونال"
+      founding: "2015",
+      foundingDesc: "سنة التأسيس تحت مسمى شركة عبد الرحمن سرحان المحدودة",
+      expansion: "2025",
+      expansionDesc: "إعادة التأسيس والتوسع تحت الهوية المؤسسية الجديدة (وجيه إنترناشونال جروب)"
     }
   };
 
-  const { title, establishment, establishmentDesc, expansion, expansionDesc } = content[language];
+  const { title, founding, foundingDesc, expansion, expansionDesc } = content[language];
 
   return (
     <section className={`section-padding bg-background relative overflow-hidden ${language === 'ar' ? 'rtl font-arabic' : 'ltr'}`}>
-      {/* Foundation timeline background */}
+      {/* Timeline background */}
       <div className="absolute inset-0">
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-primary transform -translate-x-1/2"></div>
-        <div className="absolute top-1/4 left-1/2 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 pulse-glow"></div>
-        <div className="absolute top-3/4 left-1/2 w-4 h-4 bg-secondary rounded-full transform -translate-x-1/2 pulse-glow"></div>
+        <div className="absolute left-1/2 top-1/3 bottom-1/3 w-1 bg-gradient-primary transform -translate-x-1/2 rounded-full"></div>
       </div>
 
       <div className="container-custom relative z-10">
@@ -39,26 +37,49 @@ export const FoundationSection = ({ language }: FoundationSectionProps) => {
           <div className="w-24 h-1 bg-gradient-secondary mx-auto rounded-full"></div>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="flex justify-center">
-            {/* Single centered card for establishment */}
-            <div className="glass-effect p-12 rounded-3xl border-l-4 border-primary shadow-elevated hover:shadow-glow transition-all duration-300 text-center max-w-2xl">
-              <div className="text-8xl md:text-9xl font-bold gradient-text mb-6 floating-animation">
-                2025
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* 2015 Founding */}
+            <div className={`${language === 'ar' ? 'md:order-2' : ''}`}>
+              <div className="bg-gradient-primary p-8 rounded-3xl shadow-glow transform hover:scale-105 transition-all duration-300">
+                <div className="text-center text-white">
+                  <div className="text-7xl md:text-8xl font-bold mb-6 floating-animation">
+                    {founding}
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold mb-4">
+                    {language === 'en' ? 'Founded' : 'سنة التأسيس'}
+                  </h3>
+                  <p className="text-white/90 leading-relaxed">
+                    {foundingDesc}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-                {establishment}
-              </h3>
-              <p className="text-xl text-foreground/70 leading-relaxed">
-                {establishmentDesc}
-              </p>
+            </div>
+
+            {/* 2025 Re-establishment */}
+            <div className={`${language === 'ar' ? 'md:order-1' : ''}`}>
+              <div className="bg-gradient-secondary p-8 rounded-3xl shadow-glow transform hover:scale-105 transition-all duration-300">
+                <div className="text-center text-white">
+                  <div className="text-7xl md:text-8xl font-bold mb-6 floating-animation" style={{animationDelay: '0.5s'}}>
+                    {expansion}
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold mb-4">
+                    {language === 'en' ? 'Re-establishment' : 'إعادة التأسيس'}
+                  </h3>
+                  <p className="text-white/90 leading-relaxed">
+                    {expansionDesc}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Simple decorative element */}
-          <div className="mt-16 flex justify-center">
-            <div className="w-20 h-20 bg-gradient-primary rounded-full shadow-glow flex items-center justify-center">
-              <div className="text-white font-bold text-2xl">2025</div>
+          {/* Timeline connector */}
+          <div className="mt-12 flex justify-center">
+            <div className="flex items-center space-x-8">
+              <div className="w-6 h-6 bg-gradient-primary rounded-full shadow-glow"></div>
+              <div className="w-24 h-1 bg-gradient-primary rounded-full"></div>
+              <div className="w-6 h-6 bg-gradient-secondary rounded-full shadow-glow"></div>
             </div>
           </div>
         </div>
