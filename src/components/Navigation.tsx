@@ -50,7 +50,7 @@ export const Navigation = ({ language, onLanguageToggle }: NavigationProps) => {
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <img 
-              src="/lovable-uploads/e65ec05a-c217-45f6-b102-c7a562e777ce.png" 
+              src="/lovable-uploads/4180c406-68d4-445c-a110-4cc7637490fe.png" 
               alt="WajiH International Group Logo" 
               className="h-16 md:h-20 lg:h-24 w-auto max-w-[200px] md:max-w-[250px] lg:max-w-[300px]"
             />
