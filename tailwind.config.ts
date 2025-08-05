@@ -74,8 +74,9 @@ export default {
 				'elevated': 'var(--shadow-elevated)',
 			},
 			fontFamily: {
-				'display': ['Inter', 'system-ui', 'sans-serif'],
-				'arabic': ['Noto Sans Arabic', 'system-ui', 'sans-serif'],
+				'display': ['Anton', 'Coolvetica', 'system-ui', 'sans-serif'],
+				'arabic': ['HONOR Sans Arabic', 'system-ui', 'sans-serif'],
+				'english': ['Anton', 'Coolvetica', 'system-ui', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

@@ -8,46 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 240 15% 96%;
-    --foreground: 240 15% 15%;
+    --background: 244 0% 100%;
+    --foreground: 244 0% 9%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 15% 15%;
+    --card: 244 0% 100%;
+    --card-foreground: 244 0% 9%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 15% 15%;
+    --popover: 244 0% 100%;
+    --popover-foreground: 244 0% 9%;
 
-    --primary: 255 85% 65%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 244 57% 90%;
+    --primary-foreground: 244 0% 100%;
 
-    --secondary: 140 60% 55%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 136 57% 90%;
+    --secondary-foreground: 244 0% 9%;
 
-    --muted: 240 15% 90%;
-    --muted-foreground: 240 10% 45%;
+    --muted: 244 0% 90%;
+    --muted-foreground: 244 0% 45%;
 
-    --accent: 255 70% 70%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 136 57% 90%;
+    --accent-foreground: 244 0% 9%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 244 0% 100%;
 
-    --border: 240 15% 85%;
-    --input: 240 15% 85%;
-    --ring: 255 85% 65%;
+    --border: 244 0% 85%;
+    --input: 244 0% 85%;
+    --ring: 244 57% 90%;
 
     --radius: 1rem;
 
-    /* Custom gradient variables */
-    --gradient-primary: linear-gradient(135deg, hsl(255, 85%, 65%) 0%, hsl(280, 80%, 55%) 100%);
-    --gradient-secondary: linear-gradient(45deg, hsl(140, 60%, 55%) 0%, hsl(120, 70%, 45%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(255, 85%, 65%) 0%, hsl(280, 80%, 55%) 30%, hsl(300, 75%, 45%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(240, 25%, 15%) 0%, hsl(260, 30%, 25%) 100%);
+    /* Brand Colors from Visual Identity */
+    --spring-green: 136 57 90;  /* #62e889 */
+    --royal-violet: 244 57 90;  /* #5144e9 */
+    --charcoal-black: 244 0 9;  /* #2b2b2b */
+    --pure-white: 244 0 100;    /* #ffffff */
+
+    /* Custom gradient variables using brand colors */
+    --gradient-primary: linear-gradient(135deg, hsl(244, 57%, 90%) 0%, hsl(244, 57%, 70%) 100%);
+    --gradient-secondary: linear-gradient(45deg, hsl(136, 57%, 90%) 0%, hsl(136, 57%, 70%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(244, 57%, 90%) 0%, hsl(136, 57%, 90%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(244, 0%, 9%) 0%, hsl(244, 0%, 15%) 100%);
     
     /* Animation variables */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-glow: 0 20px 60px -10px hsl(255 85% 65% / 0.3);
-    --shadow-elevated: 0 10px 40px -5px hsl(240 25% 15% / 0.2);
+    --shadow-glow: 0 20px 60px -10px hsl(244 57% 90% / 0.3);
+    --shadow-elevated: 0 10px 40px -5px hsl(244 0% 9% / 0.2);
 
     --sidebar-background: 0 0% 98%;
 
@@ -112,7 +118,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Anton', 'Coolvetica', -apple-system, BlinkMacSystemFont, sans-serif;
     overflow-x: hidden;
   }
 
